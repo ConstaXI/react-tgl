@@ -1,10 +1,12 @@
-import React from 'react';
-import './App.css';
+import './globals/style.css'
+import Layout from './components/Layout'
 
-function App() {
+const App = (): JSX.Element => {
   return (
-    <h1>Hehe</h1>
-  );
+        <Layout>
+
+        </Layout>
+  )
 }
 
-export default App;
+export default App
