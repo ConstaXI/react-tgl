@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import classes from '../style.module.css'
 
 const ForgotPassword = (): JSX.Element => {
   const emailInputRef = useRef<HTMLInputElement>(null)
@@ -6,6 +7,9 @@ const ForgotPassword = (): JSX.Element => {
   return (
     <form>
       <input placeholder="Email" type='email' id='email' required ref={emailInputRef}/>
+      <button className={classes.submit}>
+        Send Link
+      </button>
     </form>
   )
 }
