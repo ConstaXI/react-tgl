@@ -1,10 +1,14 @@
 import MainNavigation from '../MainNavigation'
 
-const Layout = (): JSX.Element => {
+type Props = {
+  children: JSX.Element
+}
+
+const Layout = (props: Props): JSX.Element => {
   return (
     <>
-        <MainNavigation />
-        <main/>
+      <MainNavigation />
+      <main>{props.children}</main>
     </>
   )
 }

@@ -121,10 +121,4 @@ dist
 .env.development.local
 .env.test.local
 .env.production.local
-/.idea/.gitignore
-/.idea/discord.xml
-/.idea/jsLinters/eslint.xml
-/.idea/modules.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/react-tgl.iml
-/.idea/vcs.xml
+.idea
