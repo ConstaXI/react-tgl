@@ -1,34 +1,42 @@
-import { useRef } from 'react'
+import { useState } from 'react'
 import './style.css'
+import Login from '../Login'
+import SignUp from '../SignUp'
+import ForgotPassword from '../ForgotPassword'
 
 const Authentication = (): JSX.Element => {
-  const emailInputRef = useRef<HTMLInputElement>(null)
-  const passwordInputRef = useRef<HTMLInputElement>(null)
+  const [authentication, setAuthentication] = useState<string>('login')
+
+  const changeAuth = (authType: string): void => {
+    setAuthentication(authType)
+  }
 
   return (
-    <div id="container">
-        <form>
-            <div id="form-container">
-                <div>
-                    <label htmlFor='email'>Email</label>
-                    <input type='email' id='email' required ref={emailInputRef} />
-                </div>
-                <div>
-                    <label htmlFor='password'>Password</label>
-                    <input type='password' id='password' required ref={passwordInputRef} />
-                </div>
-                <button>
-                    I forgot my password
-                </button>
-                <button>
-                    Log In
-                </button>
-            </div>
-            <button>
-                Sign Un
+    <>
+      {authentication === 'login' && (
+        <>
+          <div>
+            <Login/>
+            <button onClick={changeAuth.bind(this, 'forgotPassword')}>
+              I forgot my password
             </button>
-        </form>
-    </div>
+          </div>
+          <button onClick={changeAuth.bind(this, 'signUp')}>Sign Up</button>
+        </>
+      )}
+      {authentication === 'signUp' && (
+        <>
+          <SignUp/>
+          <button onClick={changeAuth.bind(this, 'login')}>Back</button>
+        </>
+      )}
+      {authentication === 'forgotPassword' && (
+        <>
+          <ForgotPassword/>
+          <button onClick={changeAuth.bind(this, 'login')}>Back</button>
+        </>
+      )}
+    </>
   )
 }
 
