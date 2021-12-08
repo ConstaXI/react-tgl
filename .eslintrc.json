@@ -17,7 +17,8 @@
         "sourceType": "module"
     },
     "globals": {
-        "JSX": "readonly"
+        "JSX": "readonly",
+        "NodeJS": true
     },
     "plugins": [
         "react",

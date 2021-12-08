@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
 import MainNavigation from '../MainNavigation'
 
 type Props = {
-  children: JSX.Element
+  children: ReactNode
 }
 
 const Layout = (props: Props): JSX.Element => {
