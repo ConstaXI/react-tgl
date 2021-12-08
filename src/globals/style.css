@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background: #F7F7F7;
+    color: #707070;
 }
 
 h1,
@@ -18,4 +19,8 @@ h4,
 h5,
 h6 {
     font-family: 'Lato', sans-serif;
+}
+
+main {
+    padding: 0 9rem;
 }
