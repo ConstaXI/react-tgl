@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import MainNavigation from '../MainNavigation'
 
 type Props = {
   children: ReactNode
@@ -7,10 +6,7 @@ type Props = {
 
 const Layout = (props: Props): JSX.Element => {
   return (
-    <>
-      <MainNavigation />
-      <main>{props.children}</main>
-    </>
+    <main>{props.children}</main>
   )
 }
 

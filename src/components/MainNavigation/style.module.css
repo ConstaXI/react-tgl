@@ -1,0 +1,64 @@
+.header {
+    background: #F7F7F7;
+
+    height: 80px;
+    padding: 0 6rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 64px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #707070;
+}
+
+nav {
+    width: 35%;
+    align-self: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+}
+
+.line {
+    width: 100%;
+    background: #EBEBEB;
+    height: 2px;
+    border: 2px solid #EBEBEB;
+    margin: 0;
+}
+
+.logoLine {
+    position: relative;
+    background: #B5C401;
+    height: 7px;
+    top: 5px;
+    margin: 0;
+    border: none;
+    border-radius: 10px;
+}
+
+svg {
+    width: 32px;
+    height: 32px;
+}

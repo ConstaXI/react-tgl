@@ -1,10 +1,13 @@
-import { FormEvent, useRef } from 'react'
+import { FormEvent, useContext, useRef } from 'react'
 import baseUrl from '../../../api'
 import { useNavigate } from 'react-router-dom'
 import classes from '../style.module.css'
+import AuthContext from '../../../store/auth'
 
 const SignUp = (): JSX.Element => {
   const navigate = useNavigate()
+
+  const authContext = useContext(AuthContext)
 
   const emailInputRef = useRef<HTMLInputElement>(null)
   const passwordInputRef = useRef<HTMLInputElement>(null)
@@ -25,7 +28,7 @@ const SignUp = (): JSX.Element => {
       }
     }).then(async (response) => {
       if (response.ok) {
-        navigate('recent_games')
+        return response.json()
       } else {
         const data = await response.json()
         let errorMessage = 'Authentication failed.'
@@ -34,6 +37,12 @@ const SignUp = (): JSX.Element => {
         }
         throw new Error(errorMessage)
       }
+    }).then(data => {
+      const expirationTime = new Date(data.token.expires_at)
+
+      authContext.login(data.token.token, expirationTime.getTime())
+
+      navigate('/recent_games')
     }).catch((error) => {
       alert(error.message)
     })

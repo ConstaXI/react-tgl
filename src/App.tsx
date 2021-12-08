@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import RecentGames from './pages/RecentGames'
 import { ReactElement, useContext } from 'react'
 import AuthContext from './store/auth'
+import MainNavigation from './components/MainNavigation'
 
 const RequireAuth = (): ReactElement => {
   const authContext = useContext(AuthContext)
@@ -28,7 +29,7 @@ const App = (): JSX.Element => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route element={<RequireAuth />}>
-            <Route path='/recent_games' element={<RecentGames />} />
+            <Route path='/recent_games' element={<><MainNavigation /><RecentGames /></>} />
           </Route>
         </Routes>
       </Layout>
