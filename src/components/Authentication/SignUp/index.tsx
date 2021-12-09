@@ -50,9 +50,9 @@ const SignUp = (): JSX.Element => {
 
   return (
     <form onSubmit={submitHandler}>
-      <input placeholder="Name" type='name' id='name' required ref={nameInputRef}/>
-      <input placeholder="Email" type='email' id='email' required ref={emailInputRef}/>
-      <input placeholder="Password" type='password' id='password' required ref={passwordInputRef}/>
+      <input placeholder="Name" type='name' id='name' required ref={nameInputRef} className={classes.authInput}/>
+      <input placeholder="Email" type='email' id='email' required ref={emailInputRef} className={classes.authInput}/>
+      <input placeholder="Password" type='password' id='password' required ref={passwordInputRef} className={classes.authInput}/>
       <button className={classes.submit}>
         Register
       </button>

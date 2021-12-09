@@ -19,19 +19,22 @@
     border-radius: 100px;
     cursor: pointer;
     font-weight: bold;
-    margin-right: 32px;
+    margin-right: 16px;
     padding: 6px 32px;
 }
 
 label[for="Mega-Sena"] {
     border: 2px solid #01AC66;
+    color: #01AC66;
 }
 
 label[for="Quina"] {
     border: 2px solid #F79C31;
+    color: #F79C31;
 }
 label[for="Lotofácil"] {
     border: 2px solid #7F3992;
+    color: #7F3992;
 }
 
 input:checked + label[for="Mega-Sena"] {

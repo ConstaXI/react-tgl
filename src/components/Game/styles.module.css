@@ -1,0 +1,38 @@
+.container {
+    width: 670px;
+}
+
+.numbersContainer {
+    display: grid;
+    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+    grid-column-gap: 12px;
+    grid-row-gap: 20px;
+}
+
+.numbersContainer label {
+    text-align: center;
+    line-height: 54px;
+    background: #ADC0C4;
+    border-radius: 50%;
+    border: 4px solid #ADC0C4;
+    width: 60px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.numbersContainer label:hover {
+    background: #9aabaf;
+    border: 4px solid #9aabaf;
+}
+
+.numbersContainer input:checked + label {
+    background: white;
+    color: #27C383;
+    border: 4px solid #27C383;
+}
+
+.numbersContainer input {
+    display: none;
+}

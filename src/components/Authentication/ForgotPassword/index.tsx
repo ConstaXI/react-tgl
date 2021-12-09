@@ -6,7 +6,7 @@ const ForgotPassword = (): JSX.Element => {
 
   return (
     <form>
-      <input placeholder="Email" type='email' id='email' required ref={emailInputRef}/>
+      <input placeholder="Email" type='email' id='email' required ref={emailInputRef} className={classes.authInput}/>
       <button className={classes.submit}>
         Send Link
       </button>

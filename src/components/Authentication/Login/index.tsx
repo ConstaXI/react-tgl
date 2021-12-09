@@ -52,8 +52,8 @@ const Login = (props: Props): JSX.Element => {
 
   return (
     <form onSubmit={submitHandler}>
-      <input placeholder="Email" type='email' id='email' required ref={emailInputRef}/>
-      <input placeholder="Password" type='password' id='password' required ref={passwordInputRef}/>
+      <input placeholder="Email" type='email' id='email' required ref={emailInputRef} className={classes.authInput} />
+      <input placeholder="Password" type='password' id='password' required ref={passwordInputRef} className={classes.authInput}/>
       {props.children}
       <button className={classes.submit} type="submit">
         Log In
