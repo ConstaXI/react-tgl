@@ -34,7 +34,6 @@ const NewBet = (): JSX.Element => {
         throw new Error(errorMessage)
       }
     }).then(data => {
-      console.log(data)
       setIsLoading(false)
       setGames(data)
     }).catch((error) => {
@@ -50,13 +49,16 @@ const NewBet = (): JSX.Element => {
     <>
       <p className={classes.title}><i><b>NEW BET</b> FOR {gameType.toUpperCase()}</i></p>
       <h3><i>Choose a Game</i></h3>
-      <div className={classes.game_type}>
+      <div className={classes.gameType}>
         {!games || isLoading
           ? (
             <div>Carregando...</div>
             )
           : games.types.map(type => (
-            <button key={type.id}>{type.type}</button>
+            <>
+              <input key={type.id} type="radio" id={type.type} name="lottery-type"/>
+              <label key={type.id} htmlFor={type.type} className={classes.gameButton}>{type.type}</label>
+            </>
           ))}
       </div>
     </>

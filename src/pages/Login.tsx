@@ -1,7 +1,7 @@
 import Authentication from '../components/Authentication'
-import classes from './Home.module.css'
+import classes from './Login.module.css'
 
-const Home = (): JSX.Element => {
+const Login = (): JSX.Element => {
   return (
     <div className={classes.container}>
       <div className={classes.title}>
@@ -14,4 +14,4 @@ const Home = (): JSX.Element => {
   )
 }
 
-export default Home
+export default Login

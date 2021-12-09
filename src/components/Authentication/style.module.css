@@ -24,21 +24,23 @@ form {
     align-items: center;
 }
 
-button {
+.submit {
     background: none;
     border: none;
     cursor: pointer;
     font-weight: bold;
     font-style: italic;
-}
-
-.submit {
     font-size: 1.8rem;
     margin: 42px 0 42px 0;
     color: #B5C401;
 }
 
 .forgotPassword {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-style: italic;
+
     margin-top: 24px;
     align-self: flex-end;
     margin-right: 16px;
@@ -47,6 +49,12 @@ button {
 }
 
 .action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+
     margin-top: 24px;
     font-size: 2rem;
     color: #707070;

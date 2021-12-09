@@ -2,3 +2,49 @@
     font-size: 2rem;
 }
 
+.gameType {
+    display: flex;
+    flex-direction: row;
+    width: 512px;
+}
+
+.gameType input {
+    display: none;
+}
+
+.gameButton {
+    display: inline-block;
+    text-align: center;
+    background: white;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 32px;
+    padding: 6px 32px;
+}
+
+label[for="Mega-Sena"] {
+    border: 2px solid #01AC66;
+}
+
+label[for="Quina"] {
+    border: 2px solid #F79C31;
+}
+label[for="Lotofácil"] {
+    border: 2px solid #7F3992;
+}
+
+input:checked + label[for="Mega-Sena"] {
+    background: #01AC66;
+    color: white;
+}
+
+input:checked + label[for="Quina"] {
+    background: #F79C31;
+    color: white;
+}
+
+input:checked + label[for="Lotofácil"] {
+    background: #7F3992;
+    color: white;
+}
