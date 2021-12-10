@@ -36,3 +36,43 @@
 .numbersContainer input {
     display: none;
 }
+
+.optionsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addToCart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+
+    align-self: flex-end;
+    background: #27C383;
+    border: 1px solid #27C383;
+    border-radius: 10px;
+    color: #FFFFFF;
+    width: 209px;
+    height: 52px;
+    font-size: 1rem;
+}
+
+.option {
+    background: none;
+    cursor: pointer;
+
+    width: 164px;
+    height: 52px;
+
+    border: 1px solid #27C383;
+    border-radius: 10px;
+
+    color: #27C383;
+    font-size: 1rem;
+
+    margin: 3rem 1rem 0 0;
+}

@@ -1,3 +1,9 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .title {
     font-size: 2rem;
 }
@@ -50,4 +56,47 @@ input:checked + label[for="Quina"] {
 input:checked + label[for="Lotofácil"] {
     background: #7F3992;
     color: white;
+}
+
+.cart {
+    position: sticky;
+    top: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: white;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+
+    width: 317px;
+    max-height: 500px;
+
+    font-size: 2rem;
+}
+
+.cart h3 {
+    margin: 0;
+}
+
+.saveButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    background: #F4F4F4;
+    border: 1px solid #E2E2E2;
+}
+
+.save {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin: 42px 0 42px 0;
+    color: #B5C401;
 }

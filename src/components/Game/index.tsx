@@ -1,4 +1,5 @@
 import classes from './styles.module.css'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 type GameProps = {
   type: {
@@ -26,6 +27,13 @@ const Game = (props: GameProps): JSX.Element => {
             <label key={'bet_label_' + number} htmlFor={number.toString()}>{number}</label>
           </>
         ))}
+      </div>
+      <div className={classes.optionsContainer}>
+        <div>
+          <button className={classes.option}>Complete game</button>
+          <button className={classes.option}>Clear game</button>
+        </div>
+        <button className={classes.addToCart}><AiOutlineShoppingCart/> Add to cart</button>
       </div>
     </div>
   )

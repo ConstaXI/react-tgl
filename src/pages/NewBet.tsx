@@ -46,23 +46,33 @@ const NewBet = (): JSX.Element => {
   }
 
   return (
-    <>
-      <p className={classes.title}><i><b>NEW BET</b> FOR {selectedGame?.type.toUpperCase()}</i></p>
-      <h3><i>Choose a Game</i></h3>
-      <div className={classes.gameType}>
-        {!games || isLoading
-          ? (
-            <div>Carregando...</div>
-            )
-          : games.types.map((type, index) => (
-            <>
-              <input key={'game_input_' + type.id} type="radio" id={type.type} name="lottery-type"/>
-              <label key={'game_label_' + type.id} htmlFor={type.type} className={classes.gameButton} onClick={() => changeGame(index)}>{type.type}</label>
-            </>
-          ))}
+    <div className={classes.container}>
+      <div>
+        <p className={classes.title}><i><b>NEW BET</b> FOR {selectedGame?.type.toUpperCase()}</i></p>
+        <h3><i>Choose a Game</i></h3>
+        <div className={classes.gameType}>
+          {!games || isLoading
+            ? (
+              <div>Carregando...</div>
+              )
+            : games.types.map((type, index) => (
+              <>
+                <input key={'game_input_' + type.id} type="radio" id={type.type} name="lottery-type"/>
+                <label key={'game_label_' + type.id} htmlFor={type.type} className={classes.gameButton} onClick={() => changeGame(index)}>{type.type}</label>
+              </>
+            ))}
+        </div>
+        {selectedGame ? <Game type={selectedGame}/> : <p>No games yet.</p>}
       </div>
-      {selectedGame ? <Game type={selectedGame}/> : <p>No games yet.</p>}
-    </>
+      <aside className={classes.cart}>
+        <div style={{ padding: '32px 20px' }}>
+          <h3><i>CART</i></h3>
+        </div>
+        <div className={classes.saveButtonContainer}>
+          <button className={classes.save}>Save</button>
+        </div>
+      </aside>
+    </div>
   )
 }
 
